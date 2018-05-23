@@ -6,7 +6,7 @@ package com.example.mybatisplusboot.controller;
  */
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.mybatisplusboot.entity.LearnResouce;
+import com.example.mybatisplusboot.entity.LearnResource;
 import com.example.mybatisplusboot.service.LearnService;
 import com.example.mybatisplusboot.util.ServletUtil;
 import com.example.mybatisplusboot.util.StringUtil;
@@ -55,8 +55,8 @@ public class LearnController {
         params.put("rows", rows);
         params.put("author", author);
         params.put("title", title);
-        List<LearnResouce> learnList=learnService.queryLearnResouceList(params);
-        PageInfo<LearnResouce> pageInfo =new PageInfo<LearnResouce>(learnList);
+        List<LearnResource> learnList=learnService.queryLearnResouceList(params);
+        PageInfo<LearnResource> pageInfo =new PageInfo<LearnResource>(learnList);
         JSONObject jo=new JSONObject();
         jo.put("rows", learnList);
         jo.put("total", pageInfo.getPages());//总页数
@@ -92,11 +92,11 @@ public class LearnController {
             ServletUtil.createSuccessResponse(200, result, response);
             return;
         }
-        LearnResouce learnResouce = new LearnResouce();
-        learnResouce.setAuthor(author);
-        learnResouce.setTitle(title);
-        learnResouce.setUrl(url);
-        int index=learnService.add(learnResouce);
+        LearnResource learnResource = new LearnResource();
+        learnResource.setAuthor(author);
+        learnResource.setTitle(title);
+        learnResource.setUrl(url);
+        int index=learnService.add(learnResource);
         if(index>0){
             result.put("message","教程信息添加成功!");
             result.put("flag",true);
@@ -115,7 +115,7 @@ public class LearnController {
     public void updateLearn(HttpServletRequest request , HttpServletResponse response){
         JSONObject result=new JSONObject();
         String id = request.getParameter("id");
-        LearnResouce learnResouce=learnService.queryLearnResouceById(Long.valueOf(id));
+        LearnResource learnResource =learnService.queryLearnResouceById(Long.valueOf(id));
         String author = request.getParameter("author");
         String title = request.getParameter("title");
         String url = request.getParameter("url");
@@ -137,10 +137,10 @@ public class LearnController {
             ServletUtil.createSuccessResponse(200, result, response);
             return;
         }
-        learnResouce.setAuthor(author);
-        learnResouce.setTitle(title);
-        learnResouce.setUrl(url);
-        int index=learnService.update(learnResouce);
+        learnResource.setAuthor(author);
+        learnResource.setTitle(title);
+        learnResource.setUrl(url);
+        int index=learnService.update(learnResource);
         System.out.println("修改结果="+index);
         if(index>0){
             result.put("message","教程信息修改成功!");

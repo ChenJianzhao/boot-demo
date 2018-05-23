@@ -25,7 +25,7 @@ import org.springframework.util.StringUtils;
 
 import javax.sql.DataSource;
 
-@Configuration
+//@Configuration
 public class MybatisPlusConfig {
 
     /**
@@ -81,6 +81,7 @@ public class MybatisPlusConfig {
      * 配置文件和mybatis-boot的配置文件同步
      */
     @Bean
+    // 特别注意 MybatisSqlSessionFactoryBean 非原生的类，必须如上配置 ！
     public MybatisSqlSessionFactoryBean mybatisSqlSessionFactoryBean() {
         MybatisSqlSessionFactoryBean mybatisPlus = new MybatisSqlSessionFactoryBean();
         mybatisPlus.setDataSource(dataSource);

@@ -1,6 +1,6 @@
 package com.example.mybatisplusboot.service.impl;
 
-import com.example.mybatisplusboot.entity.LearnResouce;
+import com.example.mybatisplusboot.entity.LearnResource;
 import com.example.mybatisplusboot.mapper.LearnMapper;
 import com.example.mybatisplusboot.service.LearnService;
 import com.github.pagehelper.PageHelper;
@@ -21,13 +21,13 @@ public class LearnServiceImpl implements LearnService {
     LearnMapper learnMapper;
 
     @Override
-    public int add(LearnResouce learnResouce) {
-        return this.learnMapper.add(learnResouce);
+    public int add(LearnResource learnResource) {
+        return this.learnMapper.add(learnResource);
     }
 
     @Override
-    public int update(LearnResouce learnResouce) {
-        return this.learnMapper.update(learnResouce);
+    public int update(LearnResource learnResource) {
+        return this.learnMapper.update(learnResource);
     }
 
     @Override
@@ -36,12 +36,12 @@ public class LearnServiceImpl implements LearnService {
     }
 
     @Override
-    public LearnResouce queryLearnResouceById(Long id) {
+    public LearnResource queryLearnResouceById(Long id) {
         return this.learnMapper.queryLearnResouceById(id);
     }
 
     @Override
-    public List<LearnResouce> queryLearnResouceList(Map<String,Object> params) {
+    public List<LearnResource> queryLearnResouceList(Map<String,Object> params) {
         PageHelper.startPage(Integer.parseInt(params.get("page").toString()), Integer.parseInt(params.get("rows").toString()));
         return this.learnMapper.queryLearnResouceList(params);
     }

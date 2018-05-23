@@ -1,7 +1,7 @@
 package com.example.mybatisplusboot.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.example.mybatisplusboot.entity.LearnResouce;
+import com.example.mybatisplusboot.entity.LearnResource;
 import com.github.pagehelper.util.StringUtil;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
@@ -15,12 +15,12 @@ import java.util.Map;
  */
 @Component
 @Mapper
-public interface LearnMapper extends BaseMapper<LearnResouce> {
+public interface LearnMapper extends BaseMapper<LearnResource> {
     @Insert("insert into learn_resource(author, title,url) values(#{author},#{title},#{url})")
-    int add(LearnResouce learnResouce);
+    int add(LearnResource learnResource);
 
     @Update("update learn_resource set author=#{author},title=#{title},url=#{url} where id = #{id}")
-    int update(LearnResouce learnResouce);
+    int update(LearnResource learnResource);
 
     @DeleteProvider(type = LearnSqlBuilder.class, method = "deleteByids")
     int deleteByIds(@Param("ids") String[] ids);
@@ -32,10 +32,10 @@ public interface LearnMapper extends BaseMapper<LearnResouce> {
             @Result(property = "author", column = "author", javaType = String.class),
             @Result(property = "title", column = "title", javaType = String.class)
     })
-    LearnResouce queryLearnResouceById(@Param("id") Long id);
+    LearnResource queryLearnResouceById(@Param("id") Long id);
 
     @SelectProvider(type = LearnSqlBuilder.class, method = "queryLearnResouceByParams")
-    List<LearnResouce> queryLearnResouceList(Map<String, Object> params);
+    List<LearnResource> queryLearnResouceList(Map<String, Object> params);
 
     class LearnSqlBuilder {
         public String queryLearnResouceByParams(final Map<String, Object> params) {

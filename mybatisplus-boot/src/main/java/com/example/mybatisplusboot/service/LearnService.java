@@ -1,6 +1,6 @@
 package com.example.mybatisplusboot.service;
 
-import com.example.mybatisplusboot.entity.LearnResouce;
+import com.example.mybatisplusboot.entity.LearnResource;
 
 import java.util.List;
 import java.util.Map;
@@ -11,13 +11,13 @@ import java.util.Map;
  */
 public interface LearnService {
 
-    int add(LearnResouce learnResouce);
+    int add(LearnResource learnResource);
 
-    int update(LearnResouce learnResouce);
+    int update(LearnResource learnResource);
 
     int deleteByIds(String[] ids);
 
-    LearnResouce queryLearnResouceById(Long learnResouce);
+    LearnResource queryLearnResouceById(Long learnResouce);
 
-    List<LearnResouce> queryLearnResouceList(Map<String, Object> params);
+    List<LearnResource> queryLearnResouceList(Map<String, Object> params);
 }
