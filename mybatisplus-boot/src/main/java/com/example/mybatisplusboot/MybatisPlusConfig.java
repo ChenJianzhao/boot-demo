@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.enums.DBType;
 import com.baomidou.mybatisplus.plugins.OptimisticLockerInterceptor;
 import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.plugins.PerformanceInterceptor;
+import com.baomidou.mybatisplus.plugins.SqlExplainInterceptor;
 import com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean;
 import com.baomidou.mybatisplus.spring.boot.starter.SpringBootVFS;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
@@ -25,6 +26,9 @@ import org.springframework.util.StringUtils;
 
 import javax.sql.DataSource;
 
+/**
+ * 整合完整配置
+ */
 //@Configuration
 public class MybatisPlusConfig {
 
@@ -33,8 +37,23 @@ public class MybatisPlusConfig {
      */
     @Bean
     public PerformanceInterceptor performanceInterceptor() {
-        return new PerformanceInterceptor();
+        PerformanceInterceptor performanceInterceptor = new PerformanceInterceptor();
+        performanceInterceptor.setFormat(true);
+        performanceInterceptor.setMaxTime(100);
+        return performanceInterceptor;
     }
+
+    /**
+     * SQL 执行分析拦截器【 目前只支持 MYSQL-5.6.3 以上版本 】
+     * 分析 处理 DELETE UPDATE 语句， 防止小白或者恶意 delete update 全表操作！
+     */
+    @Bean
+    public SqlExplainInterceptor sqlExplainInterceptor() {
+        SqlExplainInterceptor sqlExplain = new SqlExplainInterceptor();
+        sqlExplain.setStopProceed(true);
+        return sqlExplain;
+    }
+
 
 //    /*
 //     * 分页插件，自动识别数据库类型
@@ -48,6 +67,10 @@ public class MybatisPlusConfig {
 //        return paginationInterceptor;
 //    }
 
+    /**
+     * 如果引入 mybatis-spring-boot-starter 会报找到多个 DataSource Bean，可指定某个 Bean
+     * 似乎 mybatis 没有 autoConfiguration
+     */
     @Autowired
     @Qualifier("mybatisPlusDataSource")
     private DataSource dataSource;

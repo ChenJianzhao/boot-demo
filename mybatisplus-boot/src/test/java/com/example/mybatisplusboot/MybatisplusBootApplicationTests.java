@@ -39,8 +39,8 @@ public class MybatisplusBootApplicationTests {
         List<LearnResource> pageResource = mapper.selectPage(
                 new Page<LearnResource>(0,10),
                 new EntityWrapper<LearnResource>()
-                        .eq("auther", "chenjz")
-                        .or("title", "test"));
+                        .eq("author", "chenjz")
+                        .or("title={0}", "test"));
 
         pageResource.forEach(System.out::println);
 
@@ -51,12 +51,11 @@ public class MybatisplusBootApplicationTests {
         mapper.updateById(model);
 
         System.out.println("select the updated resource...");
-        mapper.insert(new LearnResource(1003L, "chenjz", "test insert", "com.example.mybatisplus"));
         pageResource = mapper.selectPage(
                 new Page<LearnResource>(0,10),
                 new EntityWrapper<LearnResource>()
-                        .eq("auther", "chenjz")
-                        .or("title", "test"));
+                        .eq("author", "chenjz")
+                        .or("title={0}", "test"));
 
         pageResource.forEach(System.out::println);
 

@@ -11,6 +11,7 @@ import org.springframework.core.env.Environment;
 import javax.sql.DataSource;
 
 @SpringBootApplication
+//@MapperScan("com.boot.mapper*")
 @Import({MybatisPlusConfigDev.class})
 public class MybatisplusBootApplication {
 

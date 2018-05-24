@@ -1,7 +1,9 @@
 package com.example.mybatisplusboot.entity;
 
 import com.baomidou.mybatisplus.annotations.TableName;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
+@AllArgsConstructor
+@NoArgsConstructor
 //@TableName("learn_resoce")
 public class LearnResource {
 
