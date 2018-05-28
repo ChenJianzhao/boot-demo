@@ -1,4 +1,4 @@
-package com.example.mybatisplusboot.controller;
+package com.example.mybatisboot.controller;
 
 /**
  * @author chenjz
@@ -6,11 +6,12 @@ package com.example.mybatisplusboot.controller;
  */
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.mybatisplusboot.entity.LearnResource;
-import com.example.mybatisplusboot.service.LearnService;
-import com.example.mybatisplusboot.util.ServletUtil;
-import com.example.mybatisplusboot.util.StringUtil;
-//import com.github.pagehelper.PageInfo;
+import com.example.mybatisboot.entity.LearnResouce;
+import com.example.mybatisboot.service.LearnService;
+import com.example.mybatisboot.util.ServletUtil;
+import com.example.mybatisboot.util.StringUtil;
+import com.github.pagehelper.PageInfo;
+//import com.github.pagehelper.util.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-//import com.github.pagehelper.util.StringUtil;
 
 /** 教程页面
  * Created by tengj on 2017/3/13.
@@ -55,12 +54,12 @@ public class LearnController {
         params.put("rows", rows);
         params.put("author", author);
         params.put("title", title);
-        List<LearnResource> learnList=learnService.queryLearnResouceList(params);
-//        PageInfo<LearnResource> pageInfo =new PageInfo<LearnResource>(learnList);
+        List<LearnResouce> learnList=learnService.queryLearnResouceList(params);
+        PageInfo<LearnResouce> pageInfo =new PageInfo<LearnResouce>(learnList);
         JSONObject jo=new JSONObject();
         jo.put("rows", learnList);
-//        jo.put("total", pageInfo.getPages());//总页数
-//        jo.put("records",pageInfo.getTotal());//查询出的总记录数
+        jo.put("total", pageInfo.getPages());//总页数
+        jo.put("records",pageInfo.getTotal());//查询出的总记录数
         ServletUtil.createSuccessResponse(200, jo, response);
     }
     /**
@@ -92,11 +91,11 @@ public class LearnController {
             ServletUtil.createSuccessResponse(200, result, response);
             return;
         }
-        LearnResource learnResource = new LearnResource();
-        learnResource.setAuthor(author);
-        learnResource.setTitle(title);
-        learnResource.setUrl(url);
-        int index=learnService.add(learnResource);
+        LearnResouce learnResouce = new LearnResouce();
+        learnResouce.setAuthor(author);
+        learnResouce.setTitle(title);
+        learnResouce.setUrl(url);
+        int index=learnService.add(learnResouce);
         if(index>0){
             result.put("message","教程信息添加成功!");
             result.put("flag",true);
@@ -115,7 +114,7 @@ public class LearnController {
     public void updateLearn(HttpServletRequest request , HttpServletResponse response){
         JSONObject result=new JSONObject();
         String id = request.getParameter("id");
-        LearnResource learnResource =learnService.queryLearnResouceById(Long.valueOf(id));
+        LearnResouce learnResouce=learnService.queryLearnResouceById(Long.valueOf(id));
         String author = request.getParameter("author");
         String title = request.getParameter("title");
         String url = request.getParameter("url");
@@ -137,10 +136,10 @@ public class LearnController {
             ServletUtil.createSuccessResponse(200, result, response);
             return;
         }
-        learnResource.setAuthor(author);
-        learnResource.setTitle(title);
-        learnResource.setUrl(url);
-        int index=learnService.update(learnResource);
+        learnResouce.setAuthor(author);
+        learnResouce.setTitle(title);
+        learnResouce.setUrl(url);
+        int index=learnService.update(learnResouce);
         System.out.println("修改结果="+index);
         if(index>0){
             result.put("message","教程信息修改成功!");

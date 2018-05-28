@@ -3,7 +3,7 @@ package com.example.mybatisplusboot.service.impl;
 import com.example.mybatisplusboot.entity.LearnResource;
 import com.example.mybatisplusboot.mapper.LearnMapper;
 import com.example.mybatisplusboot.service.LearnService;
-import com.github.pagehelper.PageHelper;
+//import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,7 +42,7 @@ public class LearnServiceImpl implements LearnService {
 
     @Override
     public List<LearnResource> queryLearnResouceList(Map<String,Object> params) {
-        PageHelper.startPage(Integer.parseInt(params.get("page").toString()), Integer.parseInt(params.get("rows").toString()));
+//        PageHelper.startPage(Integer.parseInt(params.get("page").toString()), Integer.parseInt(params.get("rows").toString()));
         return this.learnMapper.queryLearnResouceList(params);
     }
 }

@@ -1,22 +1,20 @@
-package com.example.mybatisplusboot;
+package com.example.mybatisboot;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Import;
 import org.springframework.core.env.Environment;
 
 import javax.sql.DataSource;
 
 @SpringBootApplication
-//@MapperScan("com.boot.mapper*")
-@Import({MybatisPlusConfigDev.class})
-public class MybatisplusBootApplication {
+//@MapperScan("com.example.mybatisboot.mapper")
+public class MybatisBootApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisplusBootApplication.class, args);
+        SpringApplication.run(MybatisBootApplication.class, args);
     }
 
     // 获取 SpringBoot 的配置参数
@@ -25,7 +23,7 @@ public class MybatisplusBootApplication {
 
     //ok这样就算自己配置了一个DataSource，Spring Boot会智能地选择我们自己配置的这个DataSource实例。
     //destroy-method="close"的作用是当数据库连接不使用的时候,就把该连接重新放到数据池中,方便下次使用调用.
-    @Bean(name = "mybatisPlusDataSource")
+    @Bean/*(destroyMethod="close")*/
     public DataSource dataSource() {
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setUrl(env.getProperty("spring.datasource.url"));
@@ -41,6 +39,5 @@ public class MybatisplusBootApplication {
         dataSource.setTestWhileIdle(true);//建议配置为true，不影响性能，并且保证安全性。
         dataSource.setPoolPreparedStatements(false);//是否缓存preparedStatement，也就是PSCache
         return dataSource;
-
     }
 }

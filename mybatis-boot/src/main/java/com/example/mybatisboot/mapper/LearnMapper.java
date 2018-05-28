@@ -1,9 +1,7 @@
-package com.example.mybatisplusboot.mapper;
+package com.example.mybatisboot.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
-import com.example.mybatisplusboot.entity.LearnResource;
-import com.example.mybatisplusboot.util.StringUtil;
-//import com.github.pagehelper.util.StringUtil;
+import com.example.mybatisboot.entity.LearnResouce;
+import com.github.pagehelper.util.StringUtil;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
@@ -16,12 +14,12 @@ import java.util.Map;
  */
 @Component
 @Mapper
-public interface LearnMapper extends BaseMapper<LearnResource> {
+public interface LearnMapper {
     @Insert("insert into learn_resource(author, title,url) values(#{author},#{title},#{url})")
-    int add(LearnResource learnResource);
+    int add(LearnResouce learnResouce);
 
     @Update("update learn_resource set author=#{author},title=#{title},url=#{url} where id = #{id}")
-    int update(LearnResource learnResource);
+    int update(LearnResouce learnResouce);
 
     @DeleteProvider(type = LearnSqlBuilder.class, method = "deleteByids")
     int deleteByIds(@Param("ids") String[] ids);
@@ -33,19 +31,19 @@ public interface LearnMapper extends BaseMapper<LearnResource> {
             @Result(property = "author", column = "author", javaType = String.class),
             @Result(property = "title", column = "title", javaType = String.class)
     })
-    LearnResource queryLearnResouceById(@Param("id") Long id);
+    LearnResouce queryLearnResouceById(@Param("id") Long id);
 
     @SelectProvider(type = LearnSqlBuilder.class, method = "queryLearnResouceByParams")
-    List<LearnResource> queryLearnResouceList(Map<String, Object> params);
+    List<LearnResouce> queryLearnResouceList(Map<String, Object> params);
 
     class LearnSqlBuilder {
         public String queryLearnResouceByParams(final Map<String, Object> params) {
             StringBuffer sql =new StringBuffer();
             sql.append("select * from learn_resource where 1=1");
-            if(!StringUtil.isNull((String) params.get("author"))){
+            if(!StringUtil.isEmpty((String)params.get("author"))){
                 sql.append(" and author like '%").append((String)params.get("author")).append("%'");
             }
-            if(!StringUtil.isNull((String)params.get("title"))){
+            if(!StringUtil.isEmpty((String)params.get("title"))){
                 sql.append(" and title like '%").append((String)params.get("title")).append("%'");
             }
             System.out.println("查询sql=="+sql.toString());
