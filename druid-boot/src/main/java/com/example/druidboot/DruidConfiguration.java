@@ -63,8 +63,8 @@ public class DruidConfiguration {
 ////    @Scope("prototype")
 //    public JdkRegexpMethodPointcut druidStatPointcut() {
 //        JdkRegexpMethodPointcut pointcut = new JdkRegexpMethodPointcut();
-//        String servicePattern = "com.example.druidboot.service.*";
-//        String controllerPattern = "com.example.druidboot.controller.*";
+//        String servicePattern = "com.example.fastjsonboot.service.*";
+//        String controllerPattern = "com.example.fastjsonboot.controller.*";
 //        pointcut.setPatterns(servicePattern,controllerPattern);
 //        return pointcut;
 //    }

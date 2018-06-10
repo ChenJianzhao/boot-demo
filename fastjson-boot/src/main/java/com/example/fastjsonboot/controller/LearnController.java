@@ -1,4 +1,4 @@
-package com.example.druidboot.controller;
+package com.example.fastjsonboot.controller;
 
 /**
  * @author chenjz
@@ -6,10 +6,10 @@ package com.example.druidboot.controller;
  */
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.druidboot.entity.LearnResource;
-import com.example.druidboot.util.ServletUtil;
-import com.example.druidboot.util.StringUtil;
-import com.example.druidboot.service.LearnService;
+import com.example.fastjsonboot.entity.LearnResource;
+import com.example.fastjsonboot.service.LearnService;
+import com.example.fastjsonboot.util.ServletUtil;
+import com.example.fastjsonboot.util.StringUtil;
 //import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,8 +43,8 @@ public class LearnController {
         return "learn-resource";
     }
 
-    @RequestMapping(value = "/queryLeanList",method = RequestMethod.GET,produces="application/json;charset=UTF-8")
-    @ResponseBody
+//    @RequestMapping(value = "/queryLeanList",method = RequestMethod.GET,produces="application/json;charset=UTF-8")
+//    @ResponseBody
     public void queryLearnList(HttpServletRequest request , HttpServletResponse response){
         String page = request.getParameter("page"); // 取得当前页数,注意这是jqgrid自身的参数
         String rows = request.getParameter("rows"); // 取得每页显示行数，,注意这是jqgrid自身的参数
@@ -63,6 +63,13 @@ public class LearnController {
 //        jo.put("records",pageInfo.getTotal());//查询出的总记录数
         ServletUtil.createSuccessResponse(200, jo, response);
     }
+
+    @RequestMapping(value = "/queryLeanList",method = RequestMethod.GET)
+    @ResponseBody
+    public List<LearnResource> queryLearnList(){
+        return learnService.queryLearnResouceList(new HashMap<>());
+    }
+
     /**
      * 新添教程
      * @param request

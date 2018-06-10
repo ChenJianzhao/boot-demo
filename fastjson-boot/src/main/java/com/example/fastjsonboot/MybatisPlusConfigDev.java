@@ -1,4 +1,4 @@
-package com.example.druidboot;
+package com.example.fastjsonboot;
 
 import com.baomidou.mybatisplus.MybatisConfiguration;
 import com.baomidou.mybatisplus.MybatisXMLLanguageDriver;
@@ -66,66 +66,66 @@ public class MybatisPlusConfigDev {
         sqlExplain.setStopProceed(true);
         return sqlExplain;
     }
-
-    @Autowired
-//    @Qualifier("mybatisPlusDataSource")
-    DataSource dataSource;
-
-    @Autowired
-    Interceptor[] interceptors;
-
-    @Bean("mybatisSqlSession")
-    public SqlSessionFactory sqlSessionFactory(ResourceLoader resourceLoader, GlobalConfiguration globalConfiguration) throws Exception {
-        MybatisSqlSessionFactoryBean sqlSessionFactory = new MybatisSqlSessionFactoryBean();
-        sqlSessionFactory.setDataSource(dataSource);
-        sqlSessionFactory.setTypeAliasesPackage("com.example.fastjsonboot.entity");
-//        sqlSessionFactory.setMapperLocations(new ClassPathResource[]{
-//                new ClassPathResource("classpath:mapper/*.xml")
-//        });
-
-        /*
-         * MybatisConfiguration
-         */
-        MybatisConfiguration configuration = new MybatisConfiguration();
-        configuration.setDefaultScriptingLanguage(MybatisXMLLanguageDriver.class);
-        configuration.setJdbcTypeForNull(JdbcType.NULL);
-        sqlSessionFactory.setConfiguration(configuration);
-
-        /*
-         * 插件
-         */
-        sqlSessionFactory.setPlugins(interceptors);
-
-//        sqlSessionFactory.setPlugins(new Interceptor[]{
-//                new PaginationInterceptor(),
-//                new PerformanceInterceptor(),
-//                new OptimisticLockerInterceptor()
-//        });
-
-        sqlSessionFactory.setGlobalConfig(globalConfiguration);
-        return sqlSessionFactory.getObject();
-    }
-
-    /**
-     * 【全局配置】
-     * @return
-     */
-    @Bean
-    public GlobalConfiguration globalConfiguration() {
-        GlobalConfiguration conf = new GlobalConfiguration(new LogicSqlInjector());
-        // ID 策略 AUTO->`0`("数据库ID自增") INPUT->`1`(用户输入ID") ID_WORKER->`2`("全局唯一ID") UUID->`3`("全局唯一ID")
-//        conf.setIdType(2);
-        conf.setIdType(IdType.AUTO.getKey());
-        conf.setDbColumnUnderline(true);        // 数据库下划线映射为驼峰
-        conf.setDbType(DBType.MYSQL.name());    // 数据库类型（不需要这么配置了，自动获取数据库类型）
-
-//        conf.setLogicNotDeleteValue("-1");    // 逻辑删除
-//        conf.setLogicNotDeleteValue("1");
-//        conf.setMetaObjectHandler(new H2MetaObjectHandler());
-//        conf.setKeyGenerator(new OracleKeyGenerator()); // 主键 Sequence（mysql不需要）
-        return conf;
-    }
-
+//
+//    @Autowired
+////    @Qualifier("mybatisPlusDataSource")
+//    DataSource dataSource;
+//
+//    @Autowired
+//    Interceptor[] interceptors;
+//
+//    @Bean("mybatisSqlSession")
+//    public SqlSessionFactory sqlSessionFactory(ResourceLoader resourceLoader, GlobalConfiguration globalConfiguration) throws Exception {
+//        MybatisSqlSessionFactoryBean sqlSessionFactory = new MybatisSqlSessionFactoryBean();
+//        sqlSessionFactory.setDataSource(dataSource);
+//        sqlSessionFactory.setTypeAliasesPackage("com.example.fastjsonboot.entity");
+////        sqlSessionFactory.setMapperLocations(new ClassPathResource[]{
+////                new ClassPathResource("classpath:mapper/*.xml")
+////        });
+//
+//        /*
+//         * MybatisConfiguration
+//         */
+//        MybatisConfiguration configuration = new MybatisConfiguration();
+//        configuration.setDefaultScriptingLanguage(MybatisXMLLanguageDriver.class);
+//        configuration.setJdbcTypeForNull(JdbcType.NULL);
+//        sqlSessionFactory.setConfiguration(configuration);
+//
+//        /*
+//         * 插件
+//         */
+//        sqlSessionFactory.setPlugins(interceptors);
+//
+////        sqlSessionFactory.setPlugins(new Interceptor[]{
+////                new PaginationInterceptor(),
+////                new PerformanceInterceptor(),
+////                new OptimisticLockerInterceptor()
+////        });
+//
+//        sqlSessionFactory.setGlobalConfig(globalConfiguration);
+//        return sqlSessionFactory.getObject();
+//    }
+//
+//    /**
+//     * 【全局配置】
+//     * @return
+//     */
+//    @Bean
+//    public GlobalConfiguration globalConfiguration() {
+//        GlobalConfiguration conf = new GlobalConfiguration(new LogicSqlInjector());
+//        // ID 策略 AUTO->`0`("数据库ID自增") INPUT->`1`(用户输入ID") ID_WORKER->`2`("全局唯一ID") UUID->`3`("全局唯一ID")
+////        conf.setIdType(2);
+//        conf.setIdType(IdType.AUTO.getKey());
+//        conf.setDbColumnUnderline(true);        // 数据库下划线映射为驼峰
+//        conf.setDbType(DBType.MYSQL.name());    // 数据库类型（不需要这么配置了，自动获取数据库类型）
+//
+////        conf.setLogicNotDeleteValue("-1");    // 逻辑删除
+////        conf.setLogicNotDeleteValue("1");
+////        conf.setMetaObjectHandler(new H2MetaObjectHandler());
+////        conf.setKeyGenerator(new OracleKeyGenerator()); // 主键 Sequence（mysql不需要）
+//        return conf;
+//    }
+//
 
 
     /**
