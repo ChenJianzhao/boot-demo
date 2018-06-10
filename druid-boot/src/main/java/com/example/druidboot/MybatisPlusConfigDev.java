@@ -1,4 +1,4 @@
-package com.example.mybatisplusboot;
+package com.example.druidboot;
 
 import com.baomidou.mybatisplus.MybatisConfiguration;
 import com.baomidou.mybatisplus.MybatisXMLLanguageDriver;
@@ -28,6 +28,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
@@ -67,7 +68,7 @@ public class MybatisPlusConfigDev {
     }
 
     @Autowired
-    @Qualifier("mybatisPlusDataSource")
+//    @Qualifier("mybatisPlusDataSource")
     DataSource dataSource;
 
     @Autowired
@@ -77,8 +78,10 @@ public class MybatisPlusConfigDev {
     public SqlSessionFactory sqlSessionFactory(ResourceLoader resourceLoader, GlobalConfiguration globalConfiguration) throws Exception {
         MybatisSqlSessionFactoryBean sqlSessionFactory = new MybatisSqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dataSource);
-        // 以下可以在 application.xml 中配置
-        sqlSessionFactory.setTypeAliasesPackage("com.example.mybatisplusboot.entity");
+        sqlSessionFactory.setTypeAliasesPackage("com.example.druidboot.entity");
+//        sqlSessionFactory.setMapperLocations(new ClassPathResource[]{
+//                new ClassPathResource("classpath:mapper/*.xml")
+//        });
 
         /*
          * MybatisConfiguration
@@ -112,7 +115,7 @@ public class MybatisPlusConfigDev {
         GlobalConfiguration conf = new GlobalConfiguration(new LogicSqlInjector());
         // ID 策略 AUTO->`0`("数据库ID自增") INPUT->`1`(用户输入ID") ID_WORKER->`2`("全局唯一ID") UUID->`3`("全局唯一ID")
 //        conf.setIdType(2);
-        conf.setIdType(IdType.ID_WORKER.getKey());
+        conf.setIdType(IdType.AUTO.getKey());
         conf.setDbColumnUnderline(true);        // 数据库下划线映射为驼峰
         conf.setDbType(DBType.MYSQL.name());    // 数据库类型（不需要这么配置了，自动获取数据库类型）
 
@@ -163,6 +166,7 @@ public class MybatisPlusConfigDev {
         });
         sqlParserList.add(tenantSqlParser);
         paginationInterceptor.setSqlParserList(sqlParserList);
+
         paginationInterceptor.setSqlParserFilter(new ISqlParserFilter() {
             @Override
             public boolean doFilter(MetaObject metaObject) {

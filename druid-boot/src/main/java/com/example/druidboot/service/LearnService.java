@@ -1,6 +1,6 @@
-package com.example.mybatisboot.service;
+package com.example.druidboot.service;
 
-import com.example.mybatisboot.entity.LearnResource;
+import com.example.druidboot.entity.LearnResource;
 
 import java.util.List;
 import java.util.Map;

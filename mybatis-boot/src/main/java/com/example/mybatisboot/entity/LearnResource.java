@@ -8,7 +8,7 @@ import lombok.Data;
  */
 
 @Data
-public class LearnResouce {
+public class LearnResource {
     private Long id;
     private String author;
     private String title;

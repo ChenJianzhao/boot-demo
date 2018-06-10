@@ -1,9 +1,9 @@
-package com.example.mybatisplusboot;
+package com.example.druidboot;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.plugins.Page;
-import com.example.mybatisplusboot.entity.LearnResource;
-import com.example.mybatisplusboot.mapper.LearnMapper;
+import com.example.druidboot.entity.LearnResource;
+import com.example.druidboot.mapper.LearnMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class MybatisplusBootApplicationTests {
+public class DruidBootApplicationTests {
 
     @Test
     public void contextLoads() {

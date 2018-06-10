@@ -1,4 +1,4 @@
-package com.example.mybatisboot.controller;
+package com.example.druidboot.controller;
 
 /**
  * @author chenjz
@@ -6,12 +6,11 @@ package com.example.mybatisboot.controller;
  */
 
 import com.alibaba.fastjson.JSONObject;
-import com.example.mybatisboot.entity.LearnResource;
-import com.example.mybatisboot.service.LearnService;
-import com.example.mybatisboot.util.ServletUtil;
-import com.example.mybatisboot.util.StringUtil;
-import com.github.pagehelper.PageInfo;
-//import com.github.pagehelper.util.StringUtil;
+import com.example.druidboot.entity.LearnResource;
+import com.example.druidboot.service.LearnService;
+import com.example.druidboot.util.ServletUtil;
+import com.example.druidboot.util.StringUtil;
+//import com.github.pagehelper.PageInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +24,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+//import com.github.pagehelper.util.StringUtil;
 
 /** 教程页面
  * Created by tengj on 2017/3/13.
@@ -42,7 +43,7 @@ public class LearnController {
         return "learn-resource";
     }
 
-    @RequestMapping(value = "/queryLeanList",method = RequestMethod.POST,produces="application/json;charset=UTF-8")
+    @RequestMapping(value = "/queryLeanList",method = RequestMethod.GET,produces="application/json;charset=UTF-8")
     @ResponseBody
     public void queryLearnList(HttpServletRequest request , HttpServletResponse response){
         String page = request.getParameter("page"); // 取得当前页数,注意这是jqgrid自身的参数
@@ -55,11 +56,11 @@ public class LearnController {
         params.put("author", author);
         params.put("title", title);
         List<LearnResource> learnList=learnService.queryLearnResouceList(params);
-        PageInfo<LearnResource> pageInfo =new PageInfo<LearnResource>(learnList);
+//        PageInfo<LearnResource> pageInfo =new PageInfo<LearnResource>(learnList);
         JSONObject jo=new JSONObject();
         jo.put("rows", learnList);
-        jo.put("total", pageInfo.getPages());//总页数
-        jo.put("records",pageInfo.getTotal());//查询出的总记录数
+//        jo.put("total", pageInfo.getPages());//总页数
+//        jo.put("records",pageInfo.getTotal());//查询出的总记录数
         ServletUtil.createSuccessResponse(200, jo, response);
     }
     /**

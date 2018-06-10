@@ -1,7 +1,9 @@
-package com.example.mybatisboot.mapper;
+package com.example.druidboot.mapper;
 
-import com.example.mybatisboot.entity.LearnResource;
-import com.github.pagehelper.util.StringUtil;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.example.druidboot.entity.LearnResource;
+import com.example.druidboot.util.StringUtil;
+//import com.github.pagehelper.util.StringUtil;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +16,7 @@ import java.util.Map;
  */
 @Component
 @Mapper
-public interface LearnMapper {
+public interface LearnMapper extends BaseMapper<LearnResource> {
     @Insert("insert into learn_resource(author, title,url) values(#{author},#{title},#{url})")
     int add(LearnResource learnResource);
 
@@ -40,10 +42,10 @@ public interface LearnMapper {
         public String queryLearnResouceByParams(final Map<String, Object> params) {
             StringBuffer sql =new StringBuffer();
             sql.append("select * from learn_resource where 1=1");
-            if(!StringUtil.isEmpty((String)params.get("author"))){
+            if(!StringUtil.isNull((String) params.get("author"))){
                 sql.append(" and author like '%").append((String)params.get("author")).append("%'");
             }
-            if(!StringUtil.isEmpty((String)params.get("title"))){
+            if(!StringUtil.isNull((String)params.get("title"))){
                 sql.append(" and title like '%").append((String)params.get("title")).append("%'");
             }
             System.out.println("查询sql=="+sql.toString());

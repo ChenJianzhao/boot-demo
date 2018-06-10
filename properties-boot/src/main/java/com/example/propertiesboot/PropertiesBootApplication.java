@@ -19,7 +19,7 @@ public class PropertiesBootApplication {
 	}
 
     @Autowired
-    ConfigBean configBean;
+        ConfigBean configBean;
 
     @RequestMapping("/")
     public String hexo(){
