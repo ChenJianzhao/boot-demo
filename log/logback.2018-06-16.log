@@ -1,0 +1,320 @@
+11:29:06.094 logback [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 54246 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+11:29:06.104 logback [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+11:29:06.342 logback [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72f926e6: startup date [Sat Jun 16 11:29:06 CST 2018]; root of context hierarchy
+11:29:08.650 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+11:29:08.682 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+11:29:08.700 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:29:08.701 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+11:29:08.720 logback [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+11:29:08.922 logback [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:29:08.922 logback [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2580 ms
+11:29:09.144 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+11:29:09.153 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+11:29:09.154 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+11:29:09.154 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+11:29:09.154 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+11:29:09.364 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:29:09.718 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72f926e6: startup date [Sat Jun 16 11:29:06 CST 2018]; root of context hierarchy
+11:29:09.827 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:29:09.833 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+11:29:09.834 logback [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+11:29:09.874 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:29:09.874 logback [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+11:29:10.209 logback [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+11:29:10.230 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+11:29:10.265 logback [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+11:29:10.288 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+11:29:10.397 logback [main] INFO  c.e.l.LogbackBootApplication - Started LogbackBootApplication in 5.663 seconds (JVM running for 6.899)
+11:52:10.521 logback [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72f926e6: startup date [Sat Jun 16 11:29:06 CST 2018]; root of context hierarchy
+11:52:10.565 logback [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+12:00:14.399 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 54683 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+12:00:14.410 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+12:00:14.520 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15eb5ee5: startup date [Sat Jun 16 12:00:14 CST 2018]; root of context hierarchy
+12:00:16.908 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+12:00:16.932 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+12:00:16.947 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:00:16.948 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+12:00:16.964 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+12:00:17.095 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:00:17.095 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2575 ms
+12:00:17.313 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+12:00:17.320 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+12:00:17.320 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+12:00:17.321 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+12:00:17.321 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+12:00:17.580 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12:00:17.936 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@15eb5ee5: startup date [Sat Jun 16 12:00:14 CST 2018]; root of context hierarchy
+12:00:18.075 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+12:00:18.080 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+12:00:18.081 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+12:00:18.117 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12:00:18.117 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+12:00:18.461 logback-boot [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+12:00:18.461 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+12:00:18.466 logback-boot [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:00:18.495 logback-boot [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+12:00:18.497 logback-boot [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+17:08:43.630 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 57307 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+17:08:43.651 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+17:08:43.782 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71329995: startup date [Sat Jun 16 17:08:43 CST 2018]; root of context hierarchy
+17:08:46.224 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:08:46.281 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:08:46.310 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:08:46.310 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:08:46.339 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+17:08:46.606 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:08:46.607 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2825 ms
+17:08:46.904 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:08:46.916 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:08:46.919 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:08:46.919 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:08:46.919 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:08:47.304 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:08:47.730 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71329995: startup date [Sat Jun 16 17:08:43 CST 2018]; root of context hierarchy
+17:08:48.003 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:08:48.013 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:08:48.018 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:08:48.074 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:08:48.075 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:08:48.712 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:08:48.746 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:08:48.807 logback-boot [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:08:48.851 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17:08:48.864 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Started LogbackBootApplication in 6.753 seconds (JVM running for 8.63)
+17:08:51.722 logback-boot [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@71329995: startup date [Sat Jun 16 17:08:43 CST 2018]; root of context hierarchy
+17:08:51.727 logback-boot [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:10:14.486 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 57328 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+17:10:14.503 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+17:10:14.783 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72f926e6: startup date [Sat Jun 16 17:10:14 CST 2018]; root of context hierarchy
+17:10:16.974 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:10:17.002 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:10:17.019 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:10:17.019 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:10:17.033 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+17:10:17.182 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:10:17.183 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2400 ms
+17:10:17.524 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:10:17.538 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:10:17.538 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:10:17.539 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:10:17.539 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:10:17.835 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:10:18.205 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72f926e6: startup date [Sat Jun 16 17:10:14 CST 2018]; root of context hierarchy
+17:10:18.340 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:10:18.346 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:10:18.347 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:10:18.385 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:10:18.385 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:10:18.940 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:10:18.976 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:10:19.053 logback-boot [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:10:19.089 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17:10:19.096 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Started LogbackBootApplication in 5.68 seconds (JVM running for 6.768)
+17:10:21.064 logback-boot [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@72f926e6: startup date [Sat Jun 16 17:10:14 CST 2018]; root of context hierarchy
+17:10:21.066 logback-boot [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:12:06.192 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 57346 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+17:12:06.205 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+17:12:06.431 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27ce24aa: startup date [Sat Jun 16 17:12:06 CST 2018]; root of context hierarchy
+17:12:08.857 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:12:08.882 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:12:08.901 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:12:08.902 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:12:08.928 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+17:12:09.052 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:12:09.053 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2623 ms
+17:12:09.328 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:12:09.330 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet statViewServlet mapped to [/druid/*]
+17:12:09.334 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:12:09.335 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:12:09.335 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:12:09.336 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:12:09.336 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+17:12:09.552 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:12:09.960 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27ce24aa: startup date [Sat Jun 16 17:12:06 CST 2018]; root of context hierarchy
+17:12:10.192 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:12:10.201 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:12:10.202 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:12:10.236 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:12:10.236 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:12:10.393 logback-boot [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+17:12:10.497 logback-boot [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+17:12:10.501 logback-boot [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+17:12:10.555 logback-boot [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:12:10.558 logback-boot [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+17:13:35.098 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 57365 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+17:13:35.144 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+17:13:35.306 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ed7259e: startup date [Sat Jun 16 17:13:35 CST 2018]; root of context hierarchy
+17:13:37.657 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:13:37.684 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:13:37.730 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:13:37.733 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:13:37.752 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+17:13:37.909 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:13:37.909 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2603 ms
+17:13:38.111 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:13:38.130 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:13:38.131 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:13:38.131 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:13:38.131 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:13:38.328 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:13:38.646 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ed7259e: startup date [Sat Jun 16 17:13:35 CST 2018]; root of context hierarchy
+17:13:38.751 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:13:38.758 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:13:38.759 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:13:38.797 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:13:38.798 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:13:39.100 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:13:39.119 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:13:39.151 logback-boot [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:13:39.169 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17:13:39.175 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Started LogbackBootApplication in 5.14 seconds (JVM running for 5.956)
+17:18:28.410 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 57408 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+17:18:28.439 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+17:18:28.619 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4facf68f: startup date [Sat Jun 16 17:18:28 CST 2018]; root of context hierarchy
+17:18:31.133 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:18:31.176 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:18:31.201 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:18:31.202 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:18:31.219 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+17:18:31.410 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:18:31.410 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2791 ms
+17:18:31.629 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:18:31.641 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:18:31.642 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:18:31.642 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:18:31.642 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:18:31.937 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:18:32.267 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4facf68f: startup date [Sat Jun 16 17:18:28 CST 2018]; root of context hierarchy
+17:18:32.382 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:18:32.392 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:18:32.395 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:18:32.471 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:18:32.472 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:18:32.737 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:18:32.756 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:18:32.788 logback-boot [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1255)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1243)
+	at com.example.logbackboot.LogbackBootApplication.main(LogbackBootApplication.java:17)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 14 common frames omitted
+17:18:32.794 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+17:18:32.794 logback-boot [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+17:18:32.818 logback-boot [main] INFO  o.apache.catalina.util.LifecycleBase - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+17:18:32.818 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+17:18:32.818 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8080"]
+17:18:32.826 logback-boot [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:18:32.829 logback-boot [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+17:18:32.831 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4facf68f: startup date [Sat Jun 16 17:18:28 CST 2018]; root of context hierarchy
+17:18:32.834 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:18:45.974 logback-boot [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7ed7259e: startup date [Sat Jun 16 17:13:35 CST 2018]; root of context hierarchy
+17:18:45.979 logback-boot [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:18:57.706 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Starting LogbackBootApplication on bogon with PID 57417 (/Users/cjz/Documents/workspaces/git/boot-demo/logback-boot/target/classes started by cjz in /Users/cjz/Documents/workspaces/git/boot-demo)
+17:18:57.714 logback-boot [main] INFO  c.e.l.LogbackBootApplication - No active profile set, falling back to default profiles: default
+17:18:58.019 logback-boot [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ac3c60d: startup date [Sat Jun 16 17:18:58 CST 2018]; root of context hierarchy
+17:19:00.132 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+17:19:00.159 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+17:19:00.178 logback-boot [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+17:19:00.178 logback-boot [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.31
+17:19:00.194 logback-boot [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/cjz/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+17:19:00.339 logback-boot [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+17:19:00.339 logback-boot [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2320 ms
+17:19:00.552 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:19:00.565 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:19:00.566 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:19:00.566 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:19:00.566 logback-boot [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:19:00.743 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:19:01.047 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ac3c60d: startup date [Sat Jun 16 17:18:58 CST 2018]; root of context hierarchy
+17:19:01.134 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/login],methods=[GET]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.example.logbackboot.controller.LearnController.login(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:19:01.140 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:19:01.141 logback-boot [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:19:01.172 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:19:01.172 logback-boot [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:19:01.447 logback-boot [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:19:01.465 logback-boot [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+17:19:01.501 logback-boot [main] INFO  o.a.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+17:19:01.523 logback-boot [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+17:19:01.531 logback-boot [main] INFO  c.e.l.LogbackBootApplication - Started LogbackBootApplication in 5.021 seconds (JVM running for 5.957)
+17:19:06.750 logback-boot [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4ac3c60d: startup date [Sat Jun 16 17:18:58 CST 2018]; root of context hierarchy
+17:19:06.752 logback-boot [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
