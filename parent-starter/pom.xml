@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>parent-starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 
 	<name>parent-starter</name>
 	<description>Demo project for Spring Boot</description>

@@ -1,4 +1,4 @@
-package com.example.rabbitmqproviderboot.common;
+package com.example.rabbitmqconsumerboot.common;
 
 import lombok.Getter;
 
